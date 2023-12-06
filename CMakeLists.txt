@@ -25,11 +25,12 @@ find_package(MPI REQUIRED)
 
 include_directories(SYSTEM ${MPI_INCLUDE_PATH})
 
-add_executable(average src/average.c
-        src/labinclass/linear_road.c
-        src/labinclass/guess.c
-        src/labinclass/monte_carlo.c)
-target_link_libraries(average MPI::MPI_C)
+add_executable(monte_carlo src/labinclass/monte_carlo.c)
+target_link_libraries(monte_carlo MPI::MPI_C)
+add_executable(guess src/labinclass/guess.c)
+target_link_libraries(guess MPI::MPI_C)
+add_executable(linear_road src/labinclass/linear_road.c)
+target_link_libraries(linear_road MPI::MPI_C)
 add_executable(char_count src/char_count.c)
 target_link_libraries(char_count MPI::MPI_C)
 add_executable(filter src/filter.c)
