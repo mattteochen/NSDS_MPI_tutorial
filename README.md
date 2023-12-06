@@ -14,3 +14,11 @@ Available examples
 - Distributed average computation: gather and scatter
 - Array filter: broadcast, probe
 - Character count: more complex example that shows the complexity of data shuffle
+
+## Build
+```
+mkdir build
+cd build
+cmake ..
+make [-j n]
+```
