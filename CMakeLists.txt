@@ -43,3 +43,6 @@ add_executable(recv src/recv.c)
 target_link_libraries(recv MPI::MPI_C)
 add_executable(ring src/ring.c)
 target_link_libraries(ring MPI::MPI_C)
+
+add_executable(ants_simulation src/ants_simulation_03.c)
+target_link_libraries(ants_simulation MPI::MPI_C)
